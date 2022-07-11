@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'dangky/menu.css' %}">
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+                <li><a>
+                    <div>
+                        <img class="hinh" src="{% static '/image/logo.jpg' %}"/>
+                    </div>
+                </a></li>
+              <li><a href="#">Trang chủ</a></li>
+              <li><a href="#">Diễn đàn</a></li>
+              <li><a href="#">Tin tức</a></li>
+              <li><a href="#">Hỏi đáp</a></li>
+              <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+<hr>
+        <div>
+                <h2 class="panel">Đây là tiêu đề</h2>
+                <img class="hinhnen" src="{% static '/image/logo.jpg' %}"/>
+        </div>
+
+
+          <div>
+            {% block conten %}
+            
+            {% endblock conten %}
+          </div>
+    </body>
+</html>

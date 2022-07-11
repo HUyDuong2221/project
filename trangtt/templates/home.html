@@ -1,0 +1,20 @@
+{% extends 'menu.html' %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bai viet</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    {{ form.media }}
+    {% include 'django_quill/media.html' %}
+</head>
+{% block conten %}
+    Xin chao {{user}}<br>
+    {%for baiviet in baiviet%}
+   <h2> {{baiviet.tieude}}</h2>
+    {{baiviet.noidung.html|safe}}
+    {%endfor%}
+
+<a href="{% url 'them' %}">them</a>
+{% endblock conten %}
